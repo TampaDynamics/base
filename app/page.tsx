@@ -8,6 +8,7 @@ import Logout from "@/components/Logout";
 
 async function App() {
   const user = await AuthGetCurrentUserServer();
+  
   const { data: todos } = await cookiesClient.models.Todo.list();
 
   async function addTodo(data: FormData) {
@@ -22,7 +23,8 @@ async function App() {
   }
 
   return (
-    <>
+    <div className="flex justify-center h-screen">
+      <div>
       <h1>Hello, Amplify 👋</h1>
       {user && <Logout />}
       <form action={addTodo}>
@@ -33,7 +35,8 @@ async function App() {
       <ul>
         {todos && todos.map((todo) => <li key={todo.id}>{todo.content}</li>)}
       </ul>
-    </>
+      </div>
+    </div>
   );
 }
 
