@@ -5,6 +5,6 @@ export const auth = defineAuth({
     email: {
       verificationEmailSubject: 'Welcome to the Base app! Please verify your email!'
     },
-  }
-  
+  },
+  groups: ['admin', 'user', 'staff'],
 });
