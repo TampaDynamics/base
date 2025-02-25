@@ -3,6 +3,7 @@
 import { revalidatePath } from "next/cache";
 import { AuthGetCurrentUserServer, cookiesClient } from "@/utils/amplify-utils";
 import Logout from "@/components/Logout";
+import Chat from "@/components/Chat";
 
 async function App() {
   
@@ -35,6 +36,7 @@ async function App() {
         {todos && todos.map((todo) => <li key={todo.id}>{todo.content}</li>)}
       </ul>
       </div>
+      <Chat />
     </div>
   );
 }

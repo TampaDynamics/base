@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import "@aws-amplify/ui-react/styles.css";
-import '@/components/ConfigureAmplify'
-
 import ConfigureAmplifyClientSide from "@/components/ConfigureAmplify";
 
 export const metadata: Metadata = {
